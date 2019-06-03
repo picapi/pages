@@ -59,14 +59,20 @@
         .hidden {
             display: none;
         }
+		
+		#selectPrompt{
+		font-size:26px;
+		margin-top:40px;	
+		font-weight:bold;}
     </style>
 </head>
 
 <body>
     <h1 class="center">Elite Camps 2019 - What we know</h1>
     <div class="center age-select">
-        <span id="youngSelect" onclick="younger()">14-15</span> / <span id="oldSelect" onclick="older()" class="selected">16-18</span>
+        <span id="youngSelect" onclick="younger()">14-15</span> / <span id="oldSelect" onclick="older()">16-18</span>
     </div>
+	<div id="selectPrompt" class="center"> Please select the relevant age group for you, so we can provide relevant information!</div>
     <div class="younger hidden">
         <div class="center">
             <div class="q">When and where are the Elite camps?</div>
@@ -77,6 +83,10 @@
                     <li>Lancaster, from the 30th July to the 1st August,</li>
                     <li>London, from the 6th August to the 8th August.</li>
                 </ul>
+            </div>
+			<div class="q">Do I need to journey there and back every day?</div>
+            <div class="a">
+                Nope! We'll be provided with university accommodation for the two nights, with food and other necessities provided.
             </div>
             <div class="q">How do I know if I'm invited?</div>
             <div class="a">
@@ -89,11 +99,16 @@
             </div>
             <div class="q">Do I need a parent?</div>
             <div class="a">
-                You do need a parent to sign you in and out at the start and end of the camp; but they don't need to stick around for the entire 3 days.
+                You do need a parent, or other authorized guardian, to sign you in and out at the start and end of the camp; but they don't need to stick around for the entire 3 days.
+            </div>
+			<div class="q">Any other questions?</div>
+            <div class="a">
+                If the questions relate to personal circumstances, contact Cyber Discovery at <b>elite@joincyberdiscovery.com</b>, and they should be able to help!<br>
+				If it's more general, you can ask on our <a href="http://discord.cyberdiscoverycommunity.uk/">community discord server</a>!
             </div>
         </div>
     </div>
-    <div class="older">
+    <div class="older hidden">
         <div class="center">
             <div class="q">When and where are the Elite camps?</div>
             <div class="a">
@@ -103,6 +118,10 @@
                     <li>Lancaster, from the 29th July to the 3rd August,</li>
                     <li>London, from the 5th August to the 10th August.</li>
                 </ul>
+            </div>
+			<div class="q">Do I need to journey there and back every day?</div>
+            <div class="a">
+                Nope! We'll be provided with university accommodation for the five nights, with food and other necessities provided.
             </div>
             <div class="q">How do I know if I'm invited?</div>
             <div class="a">
@@ -114,11 +133,20 @@
                 It somewhat depends on which camp you choose to go to. The main focus at each camp is around a SANS course; which varies from camp to camp. At the Birmingham and Lancaster camps, you'd be taking <a href="https://uk.sans.org/course/hacker-techniques-exploits-incident-handling">SEC504</a>; whereas at the London camp, you'd be taking <a href="https://uk.sans.org/course/windows-forensic-analysis">FOR500</a>.
                 <br>It's likely that other secondary events will also take place during the camp alongside these courses!
             </div>
+			<div class="q">Will I have an chance to get a certification?</div>
+            <div class="a">
+                Yep! Alongside the SANS training at the event, you'll also have a chance to take a GIAC certification for that course after the event, which shows you know your stuff!
+            </div>
             <div class="q">Do I need a parent?</div>
             <div class="a">
-                You do need a parent to sign you in and out at the start and end of the camp; but they don't need to stick around for the entire 6 days.
+                You do need a parent, or other authorized guardian, to sign you in and out at the start and end of the camp; but they don't need to stick around for the entire 6 days.
             </div>
-
+			<div class="q">Any other questions?</div>
+            <div class="a">
+                If the questions relate to personal circumstances, contact Cyber Discovery at <b>elite@joincyberdiscovery.com</b>, and they should be able to help!<br>
+				If it's more general, you can ask on our <a href="http://discord.cyberdiscoverycommunity.uk/">community discord server</a>!
+            </div>
+			
         </div>
     </div>
     <script>
@@ -134,6 +162,7 @@
             }
             document.getElementById("youngSelect").classList.add("selected");
             document.getElementById("oldSelect").classList.remove("selected");
+			document.getElementById("selectPrompt").classList.add("hidden");
 
         }
 
@@ -149,6 +178,7 @@
             }
             document.getElementById("youngSelect").classList.remove("selected");
             document.getElementById("oldSelect").classList.add("selected");
+			document.getElementById("selectPrompt").classList.add("hidden");
         }
     </script>
 </body>
