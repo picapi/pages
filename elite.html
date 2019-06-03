@@ -1,0 +1,144 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+<style>
+	body{
+	margin-top:40px;
+	background-color:#0d2332;
+	color:#f2f2f2;
+	font-family: 'Noto Sans', sans-serif;
+	}
+	div{
+	margin:20px;}
+	.center{
+	display: block;
+    margin: auto;
+    text-align: center;
+	}
+	h1{
+	font-size:40px;
+		}
+	ul{
+	list-style-position: inside;
+	}
+	a:visited{
+	color:#f2f2f2;
+	}
+	.age-select{
+	font-size:22px;
+	}
+	.age-select .selected{
+	color:#c04b4e;
+	}
+	.age-select :not(.selected){
+	color:#286fa0;
+	cursor:pointer;
+	}
+	
+	.q{
+	font-weight:bold;
+	font-size:24px;
+	color:#c04b4e;
+	margin-bottom:5px;
+	}
+	
+	.a{
+	font-size:22px;
+	margin-bottom:30px;
+	margin-top:0px;}
+	.hidden{
+	display:none;}
+	
+</style>
+</head>
+<body>
+<h1 class="center">Elite Camps 2019 - What we know</h1>
+<div class="center age-select">
+<span id="youngSelect" onclick="younger()">14-15</span>  /  <span id="oldSelect" onclick="older()" class="selected">16-18</span>
+</div>
+<div class="younger hidden">
+	<div class="center">
+	<div class="q">When and where are the Elite camps?</div>
+	<div class="a">
+	Elite camps will be taking place in three locations this year:
+	<ul>
+	<li>Birmingham, from the 23nd to the 25th July,</li>
+	<li>Lancaster, from the 30th July to the 1st August,</li>
+	<li>London, from the 6th August to the 8th August.</li>
+	</ul>
+	</div>
+	<div class="q">How do I know if I'm invited?</div>
+	<div class="a">
+	Cyber Discovery has begun to send out emails to invite people to attend! It's an ongoing process, so if you've not recieved an email yet, don't give up hope!<br>
+	Emails regarding Elite will come from <b>elite@joincyberdiscovery.com</b> - make sure that the email doesn't end up in the spam folder!
+	</div>
+	<div class="q">What will we be doing at the Elite camps?</div>
+	<div class="a">
+	There hasn't been too much detail on this yet, but it's likely to involve loads of interesting talks, hands on activities and offers an amazing
+	chance to get to know fellow students!
+	</div>
+	<div class="q">Do I need a parent?</div>
+	<div class="a">
+	You do need a parent to sign you in and out at the start and end of the camp; but they don't need to stick around for the entire 3 days.
+	</div>
+	</div>
+</div>
+<div class="older">
+	<div class="center">
+	<div class="q">When and where are the Elite camps?</div>
+	<div class="a">
+	Elite camps will be taking place in three locations this year:
+	<ul>
+	<li>Birmingham, from the 22nd to the 27th July,</li>
+	<li>Lancaster, from the 29th July to the 3rd August,</li>
+	<li>London, from the 5th August to the 10th August.</li>
+	</ul>
+	</div>
+	<div class="q">How do I know if I'm invited?</div>
+	<div class="a">
+	Cyber Discovery has begun to send out emails to invite people to attend! It's an ongoing process, so if you've not recieved an email yet, don't give up hope!<br>
+	Emails regarding Elite will come from <b>elite@joincyberdiscovery.com</b> - make sure that the email doesn't end up in the spam folder!
+	</div>
+	<div class="q">What will we be doing at the Elite camps?</div>
+	<div class="a">
+	It somewhat depends on which camp you choose to go to. The main focus at each camp is around a SANS course; which varies from camp to camp.
+	At the Birmingham and Lancaster camps, you'd be taking <a href="https://uk.sans.org/course/hacker-techniques-exploits-incident-handling">SEC504</a>;
+	whereas at the London camp, you'd be taking <a href="https://uk.sans.org/course/windows-forensic-analysis">FOR500</a>. <br>It's likely that other secondary events
+	will also take place during the camp alongside these courses!
+	</div>
+	<div class="q">Do I need a parent?</div>
+	<div class="a">
+	You do need a parent to sign you in and out at the start and end of the camp; but they don't need to stick around for the entire 6 days.
+	</div>
+	
+</div>
+</div>
+<script>
+	function younger(){
+	//Shows the stuff for younger people, and hides the older stuff.
+		o = document.getElementsByClassName("older");
+		for (let e of o){
+			e.classList.add("hidden");
+		}
+		y = document.getElementsByClassName("younger");
+		for (let e of y){
+			e.classList.remove("hidden");
+		}
+		document.getElementById("youngSelect").classList.add("selected");
+		document.getElementById("oldSelect").classList.remove("selected");
+		
+	}
+	function older(){
+	//Shows the stuff for younger people, and hides the older stuff.
+		y = document.getElementsByClassName("younger");
+		for (let e of y){
+			e.classList.add("hidden");
+		}
+		o = document.getElementsByClassName("older");
+		for (let e of o){
+			e.classList.remove("hidden");
+		}
+		document.getElementById("youngSelect").classList.remove("selected");
+		document.getElementById("oldSelect").classList.add("selected");
+	}
+</script>
+</body>
